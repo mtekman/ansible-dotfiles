@@ -1,0 +1,9 @@
+---
+- hosts: remote
+  roles:
+    - install-packages
+    - setup-shell
+    - setup-desktop
+    - setup-emacs
+    - setup-development-repos
+    - setup-notebooks

@@ -1,0 +1,157 @@
+---
+- name: General Utils
+  pacman: name={{item}}
+  with_items:
+    - acpid
+    - arandr
+    - bzip2
+    - chromium
+    - coreutils
+    - cryptsetup
+    - device-mapper
+    - devtools
+    - dialog
+    - diffutils
+    - firefox
+    - flex
+    - garcon
+    - gawk
+    - gcc
+    - gcc-libs
+    - gettext
+    - git
+    - glibc
+    - gpicview
+    - grep
+    - gzip
+    - haveged
+    - htop
+    - imagemagick
+    - less
+    - libtool
+    - licenses
+    - lxterminal
+    - logrotate
+    - m4
+    - make
+    - man-db
+    - man-pages
+    - pacman
+    - pacman-mirrorlist
+    - patch
+    - pciutils
+    - perl
+    - pkg-config
+    - procps-ng
+    - psmisc
+    - shadow
+    - sshfs
+    - sudo
+    - sysfsutils
+    - systemd-sysvcompat
+    - texinfo
+    - thunar-archive-plugin
+    - thunar-media-tags-plugin
+    - thunar-volman
+    - tmux
+    - tumbler
+    - usbutils
+    - util-linux
+    - vboot-utils
+    - wget
+    - which
+    - wpa_supplicant
+    - xclip
+    - xfconf
+    - xterm
+
+- name: Audio
+  pacman: name={{item}}
+  with_items:
+    - alsa-firmware
+    - alsa-oss
+    - alsa-plugins
+    - alsa-tools
+    - alsa-utils
+    - pavucontrol
+    - pulseaudio
+    - pulseaudio-alsa
+
+- name: Drivers
+  pacman: name={{item}}
+  with_items:
+    - xf86-input-evdev
+    - xf86-input-keyboard
+    - xf86-input-mouse
+    - xf86-input-synaptics
+    - xf86-video-fbdev
+
+- name: nettools
+  pacman: name={{item}}
+  with_items:
+    - dhcpcd
+    - dialog
+    - inetutils
+    - iproute2
+    - iputils
+    - iw
+    - netctl
+    - net-tools
+    - networkmanager
+    - openssh
+    - wifi-menu
+
+- name: Desktop-i3
+  pacman: name={{item}}
+  with_items:
+    - i3blocks
+    - i3-gaps
+    - i3lock
+    - i3status
+    - rofi
+
+- name: Xorg
+  pacman: name={{item}}
+  with_items:
+    - xorg-apps
+    - xorg-server
+    - xorg-server-common
+    - xorg-server-xvfb
+    - xorg-twm
+    - xorg-xclock
+    - xorg-xinit
+
+
+- name: Editors
+  pacman: name={{item}}
+  with_items:
+    - emacs
+    - nano
+    - ruby
+    - sed
+    - vi
+
+
+- name: Media Players
+  pacman: name={{item}}
+  with_items:
+    - ffmpeg
+    - parole
+    - mpv
+    - vlc
+
+- name: Filesystem
+  pacman: name={{item}}
+  with_items:
+    - e2fsprogs
+    - file
+    - file-roller
+    - filesystem
+    - findutils
+    - jfsutils
+    - lvm2
+    - mdadm
+    - reiserfsprogs
+    - rsync
+    - tar
+    - xfsprogs

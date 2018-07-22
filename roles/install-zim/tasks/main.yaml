@@ -1,0 +1,26 @@
+---
+- name: Install Zsh
+  pacman:
+    name: zsh
+    state: latest
+
+- name: Change default shell to zsh
+  user:
+    name: "{{ ansible_ssh_user }}"
+    shell: /bin/zsh
+  become: yes
+
+- name: Clone zim
+  git:
+    repo: https://github.com/zimfw/zimfw.git
+    recursive: true
+    version: master
+    dest: ~/.zim
+    accept_hostkey: yes
+  ignore_errors: yes
+    
+- name: Copy over configs
+  copy: src={{ item.0 }} dest={{ item.1 }}
+  with_together:
+    - ['zimrc', 'zshrc']
+    - ['~/.zimrc','~/.zshrc']
